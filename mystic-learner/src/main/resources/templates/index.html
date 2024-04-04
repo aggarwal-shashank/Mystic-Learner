@@ -11,100 +11,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-body{
-font-family: DM Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}
-    
-    .navbar {
-      margin-bottom: 0;
-      background:transparent;
-      border:none;
-      min-height:70px;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 19px;
-      border-radius: 0;
-      letter-spacing: 1px;
-    }
-   .nav-container{
-     margin-top:10px;
-   } 
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-    
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
-.logo-img{
-    width: 50px;
-    }
-.nav-link{
-color:#337ab7!important;
-}
-.nav-link:hover{
-	color:#b028cc !important;
-}
-.brand-name{
-	font-size: 25px;
-	text-decoration: none;
-	
-	
-}
-.navbar-toggle{
-	background-color: #000;
-}
-a:hover{
-	text-decoration: none;
-	
-}
-.course-grid{
-    border: 1px solid #000;
-    border-radius: 10px;
-    
-}
-.course-thumb{
-	    border-radius: 10px;
-    border: 1px solid transparent;
-}
-  /* Hide the carousel text when the screen is less than 600 pixels wide */
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; 
-    }
-  }
-  </style>
-</head>
+  <link rel="stylesheet" href="./css/style.css">
+ </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid nav-container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand1" href="#"><img class="logo-img" src="astro-logo.jpg"><span class="brand-name"> Mystic Learner<span></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li ><a href="#" class="nav-link">Home</a></li>
-        <li ><a href="#" class="nav-link">Courses</a></li>
-        <li ><a href="#" class="nav-link">About Us</a></li>
-        
-        <li ><a href="#" class="nav-link">Shopping</a></li>
-        <li ><a href="#" class="nav-link"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+ <th:block th:include="/header"></th:block>
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -141,53 +53,227 @@ a:hover{
     </a>
 </div>
   <div class="container text-center">    
-  <h3>About Us</h3><br>
-  <div class="row">
-    <div class="col-sm-6">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    =
-    </div>
-    <div class="col-sm-6"> 
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
-   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
-   <button>View More</button>
-    </div>
+  <br>
+  <div class="row text-left">
+     <div class="col-sm-4 about-us-img">
+      <img  th:src="@{/Images/astrology-circle.png}" class="img-responsive" style="width:100%;" alt="Image">
     
-  </div>
-</div>
-<div class="container ">    
-  <h3 class="text-center">Our Courses</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-		<div class="course-grid">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive course-thumb" style="width:100%" alt="Image">
-      <h3 style="text-align: left;">Course 1 Name</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
     </div>
-    </div>
-    <div class="col-sm-4">
-		<div class="course-grid">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive course-thumb" style="width:100%" alt="Image">
-       <h3>Course 2 Name</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
-      </div> 
-    </div>
-    <div class="col-sm-4 ">
-		<div class="course-grid"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive course-thumb" style="width:100%" alt="Image">
-        <h3>Course 3 Name</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
-		</div>
+    <div class="col-sm-8 about-us-text"> 
+<h3 class="headings">About Us</h3>
+      <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+   <p class="text-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+   <button class="btn btn-primary read-more">Read More</button>
+   
     </div>
    
   </div>
 </div>
+<div class="container ">    
+  <h3 class="text-center headings">Our Courses</h3><br>
+  <div class="row">
+    <div class="col-md-4 " th:each="i : ${#numbers.sequence(1, 6)}">
+		<div class="course-grid"> 
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive course-thumb" style="width:100%" alt="Image">
+        <div class="row">
+		  <div class="col-sm-8">  <h3 class="text-left">Course <span th:text="${i}">Name</span></h3></div>
+		   <div class="col-sm-4"><h3 class="text-right">&#8377; 19,999</h3> </div>
+	  </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+		</div>
+    </div>
+  </div>
+  <div class="more-courses"><button type="button" class="btn btn-primary btn-lg more-courses-btn">View More Courses</button></div>
+</div>
 <br>
+<div class="container-fluid meet-mentor-bg">
+<div class="container text-center meet-mentor">    
+  <br>
+  <div class="row text-left">
+    
+    <div class="col-sm-8 "> 
+<h3 class="headings">Meet Your Mentor</h3>
+     <h4>Lorem ipsum</h4>
+      <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+  <h4>Lorem ipsum</h4>
+   <p class="text-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+  <h4>Lorem ipsum</h4>
+   <p class="text-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+ 
+    </div>
+    <div class="col-sm-4 ">
+      <img   th:src="@{/Images/hands.png}" class="img-responsive ]" style="width:90%;    float: right;" alt="Image">
+    
+    </div>
+  </div>
+</div>
+</div>
+<div class="container">
+	<hr>
+	<h3 class="text-center headings">Testimonials</h3><br>
+	<div class="row">
+		<div class="MultiCarousel" data-items="1,3,3,3" data-slide="3" id="MultiCarousel"  data-interval="1000">
+            <div class="MultiCarousel-inner">
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Shashank Aggarwal</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. </p>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Jatin Goel</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. </p>
 
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Raghav Sharma</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. </p>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Ritik Bharadwaj</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. </p>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Reshma Pandey</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. </p>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pad15">
+                        <p class="lead">Aman Kukreja</p>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. </p>
+
+                    </div>
+                </div>
+
+               
+            </div>
+            <button class="btn btn-primary leftLst"><</button>
+            <button class="btn btn-primary rightLst">></button>
+        </div>
+	</div>
+	
+</div>
+
+<th:block th:include="/footer"></th:block>
+<script>
+$(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+</script>
 </body>
 </html>
