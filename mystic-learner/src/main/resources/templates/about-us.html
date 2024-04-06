@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.w3.org/1999/html"
+	xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+  <title>Mystic Learners | About us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+	  .main-heading{
+		  font-size: 50pt;
+		  text-shadow: none;
+	  }
+	  .tagline{
+		  font-size: 15pt;
+    	  font-family: 'GFS Didot', serif;
+	  }
+	  .container{
+		  margin-bottom:50px;
+	  }
+  </style>
+ </head>
+<body>
+
+ <th:block th:insert="/header"></th:block>
+  <div class="container-fluid our-courses">
+  <h3 class="text-center main-heading ">About Us</h3>
+ <!-- <div class="text-center tagline">Get Your learnings Started Today!!</div>
+ --> </div>
+<div class="container text-center">    
+  <br>
+  <div class="row text-left">
+     <div class="col-sm-4 about-us-img">
+      <img  th:src="@{/Images/astrology-circle.png}" class="img-responsive" style="width:100%;" alt="Image">
+    
+    </div>
+    <div class="col-sm-8 about-us-text"> 
+<h3 class="headings">What We Do</h3>
+      <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+   <p class="text-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+   <p class="text-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+   
+    </div>
+   
+  </div>
+</div>
+<div class="container text-center meet-mentor">    
+  <br>
+  <div class="row text-left">
+    
+    <div class="col-sm-8 slide-left"> 
+<h3 class="headings">Meet Your Mentor</h3>
+     <h4>Lorem ipsum</h4>
+      <p class="text-left"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+  <h4>Lorem ipsum</h4>
+   <p class="text-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+  <h4>Lorem ipsum</h4>
+   <p class="text-left" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
+ 
+    </div>
+    <div class="col-sm-4 ">
+      <img   th:src="@{/Images/hands.png}" class="img-responsive ]" style="width:90%;    float: right;" alt="Image">
+    
+    </div>
+  </div>
+</div>
+
+<th:block th:insert="/footer"></th:block>
+</body>
+</html>
