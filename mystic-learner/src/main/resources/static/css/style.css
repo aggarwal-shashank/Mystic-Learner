@@ -116,6 +116,9 @@ p{
 			
 			animation: slideInRight 1.5s ease forwards;
 		}
+		.slide-left{
+			animation: slideInLeft 1.5s ease forwards;
+		}
 		.read-more{
 			background-color: #582564;
 			border:1px solid #582564;
@@ -161,4 +164,18 @@ p{
 			border-color: #582564;
 		}
 		
-
+.our-courses{
+background:	url("../Images/header-bg.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+margin-top: 60px;
+margin-bottom: 80px;
+padding: 50px;
+}
+a{
+	color: #fff;
+}
+.a:hover{
+	color:#b028cc !important;
+}
