@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.w3.org/1999/html"
+	xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+  <title>Mystic Learners</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+	  .container{
+		  margin-top: 110px;
+		  margin-bottom:100px
+	  }
+	  .linkControl{
+		  color:#582564;
+		  text-decoration: underline;
+	  }
+	  .btn-primary{
+		  background-color: #582564;
+	  }
+  </style>
+ </head>
+<body>
+
+ <th:block th:insert="/header"></th:block>
+<div class="container">
+    <div class="row">
+		<div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <h3>Login</h3>
+            <p>Please fill out this to login</p>
+            <form th:action="@{/login}" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control form-control-lg">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control form-control-lg" placeholder="Password" name="password" id="password">
+                </div>
+                <div th:if="${param.error}" class="alert alert-error text-danger">
+                    Invalid username or password.
+                </div>
+
+                <input type="submit" value="Login" class="btn btn-primary btn-block">
+                <br>
+                <span >Don't have an account <a class="linkControl" href="./register.html"
+                                                th:href="@{/register}">Register here</a></span>
+                <br>
+                   </form>
+           
+        </div>
+<div class="col-sm-3"></div>
+    </div>
+</div>
+
+ <th:block th:insert="/footer"></th:block>
+</body>
+</html>

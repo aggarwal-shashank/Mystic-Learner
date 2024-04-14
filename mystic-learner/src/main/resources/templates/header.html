@@ -15,7 +15,9 @@
         <li ><a href="/about-us" class="nav-link">About Us</a></li>
         
         <li ><a href="/shopping" class="nav-link">Shopping</a></li>
-        <li ><a href="#" class="nav-link"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li ><a sec:authorize="isAnonymous()" href="/login" class="nav-link"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li ><a sec:authorize="isAuthenticated()"  href="/logout" class="nav-link"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      
       </ul>
     </div>
   </div>

@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.w3.org/1999/html"
+	xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+  <title>Mystic Learners</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+	  .desc{
+		  font-size: 15pt;
+	  }
+	  h4,h2{
+		  font-family: ' Didot', serif;
+	  }
+	  .headings{
+		  font-size: 35pt;
+	  }
+	  a{
+		  color:#582564;
+		  font-family: "Inter";
+    font-weight: normal;
+    font-size: 1.80rem;
+    letter-spacing: 0.00rem;
+    line-height: 1.55;
+    text-transform: none;
+}
+	  .course-lesson{
+		  margin-bottom: 70px;
+	  }
+	  .lessonNo{
+		      background-color: #582564;
+    color: #fff;
+    border: 1px solid #582564;
+    border-radius: 100%;
+
+    font-size: 20pt;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	  }
+  </style>
+ </head>
+<body>
+
+ <th:block th:insert="/header"></th:block>
+<div class="container-fluid"  style="padding-top: 110px;padding-bottom: 60px; background-color: 
+
+#ecd9ef;">
+  <div class="container text-center ">    
+  <br>
+  <div class="row text-left">
+     <div class="col-sm-6">
+      <img  th:src="${course.thumbImage}" class="img-responsive" style="width:100%;" alt="Image">
+    
+    </div>
+    <div class="col-sm-6"> 
+<h3 class="headings" th:text="${course.name}">About Us</h3>
+     <button class="btn enroll"><a href="/">Enroll Now</a></button>
+   
+    </div>
+   
+  </div>
+</div>
+</div>
+
+<br>
+<div class="container-fluid meet-mentor-bg">
+<div class="container text-center meet-mentor">    
+  <br>
+  <div class="row text-left">
+    
+    <div class="col-sm-9 "> 
+<h3>ABOUT THE COURSE</h3>
+     <br>
+      <p class="text-left desc" th:text="${course.description}"> </p> <br>
+ <h3>WHY SHOULD YOU JOIN THIS COURSE?</h3>
+ <br>
+ <div class="row"  style="display: flex;">
+	 <div class="col-sm-3" style="background-color: #582564; color: #fff; flex:1; padding-top:10px;">
+		 <h4>High-Demand</h4>
+		 <br>
+		 <p>In today's world, numerology has emerged as a highly sought-after skill, with an increasing number of individuals turning to it for achieving success and gaining insights into their lives.</p>
+	 </div>
+	 <div class="col-sm-3" style="background-color: #ecd9ef;color: #582564 ;flex:1; padding-top:10px;" >
+		  <h4>Elevate Your Skill Set</h4>
+		 <br>
+		 <p>Once you've mastered the fundamentals of numerology, consider enrolling in our advanced course. This program is designed to equip you with the advanced skills needed to become a successful and well-compensated numerology expert.</p>
+	 </div>
+	 <div class="col-sm-3"  style="background-color: #582564 ;color: #fff;flex:1; padding-top:10px;">
+		  <h4>Abundant Opportunities</h4>
+		 <br>
+		 <p>The field of advanced numerology offers a unique advantage with relatively less competition. This scarcity of expertise enhances your prospects of securing a high-paying position in this thriving domain.</p>
+	 </div>
+	 <div class="col-sm-3" style="background-color: #ecd9ef;color: #582564;flex:1; padding-top:10px;">
+		  <h4>Become A Numerology Consultant</h4>
+		 <br>
+		 <p>If you keenly learn this course under the mentorship of Our Astro You can be a highly paid numerologist or if you are interested in teaching you can teach numerology to beginners as well.</p>
+	 </div>
+ </div>
+    </div>
+    <div class="col-sm-3 ">
+     <div style="display: flex; align-items: center; justify-content: space-between;">
+		 <div style="width: 20%;"><img th:src="@{/Images/teacher.png}" width="100%"></div>
+		 <div style="width: 70%;">
+		 <h4>RECORDED COURSE</h4>
+         <p>Watch anytime anywhere with ease</p>
+         </div>
+     </div>
+     <br>
+     <div style="display: flex; align-items: center; justify-content: space-between;">
+		 <div style="width: 20%;"><img th:src="@{/Images/time.png}" width="100%"></div>
+		 <div style="width: 70%;">
+		 <h4>4 HOURS OF WATCH TIME</h4>
+         <p>34 modules of theory with practical exercises</p>
+         </div>
+     </div>
+     <br>
+   <div style="display: flex; align-items: center; justify-content: space-between;">
+		 <div style="width: 20%;"><img th:src="@{/Images/linguistics.png}" width="100%"></div>
+		 <div style="width: 70%;">
+		 <h4>LANGUAGE</h4>
+         <p>Courses language is Hinglish</p>
+         </div>
+     </div>
+    <br>
+   <div style="display: flex; align-items: center; justify-content: space-between;">
+		 <div style="width: 20%;"><img th:src="@{/Images/contract.png}" width="100%"></div>
+		 <div style="width: 70%;">
+		 <h4>BULK ENROLL</h4>
+         <p>Enroll in multiple course with single login</p>
+         </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<div class="container course-lesson">
+	<h2 class="text-center headings">Course Lessons</h2>
+	
+	<!-- Iterate for 10 lessons -->
+<div  th:each="lesson : ${lessons}" class="row" style="display: flex;">
+    <div class="col-sm-2" style="display:flex; align-items: center;justify-content: center;"><span class="lessonNo" th:text="${lesson.id}">1</span></div>
+    <div class="col-sm-10" style="display:flex; flex-direction: column; justify-content: space-between;">
+        <h3 th:text="${lesson.moduleName}"></h3>
+        <p th:text="${lesson.description}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>
+        <br>
+        <div>
+            <a href="/"><img th:src="@{/Images/video-lesson.png}" width="3%" style="margin: 0px 10px;"> <span th:text="${lesson.lectureName}"></span></a>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<th:block th:insert="/footer"></th:block>
+
+</body>
+</html>

@@ -72,16 +72,26 @@
 <div class="container ">    
   <h3 class="text-center headings">Our Courses</h3><br>
   <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-4" th:each="i : ${#numbers.sequence(1, 6)}">
-		<div class="course-grid"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive course-thumb" style="width:100%" alt="Image">
-        <div class="row">
-		  <div class="col-sm-8">  <h3 class="text-left">Course <span th:text="${i}">Name</span></h3></div>
-		   <div class="col-sm-4"><h3 class="text-right">&#8377; 19,999</h3> </div>
-	  </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi tellus, pulvinar vel tempus eget, finibus vitae ante. Fusce sit amet velit eleifend, iaculis velit quis, malesuada lacus. Vestibulum sodales magna a volutpat tempus. Mauris vestibulum id urna viverra ultrices. Nullam rhoncus elit eget libero varius dapibus.</p>    
-		</div>
-    </div>
+      <div class="row">
+  <div class="col-sm-6 col-md-6 col-lg-4" th:each="course : ${courses}">
+    <a class="course-link" th:href="'/course/' + ${course.id}">
+        <div class="course-grid"> 
+            <img th:src="${course.thumbImage}" class="img-responsive course-thumb" style="width:100%" alt="Image">
+            <div class="row">
+                <div class="col-sm-8">  
+                    <h3 class="text-left" th:text="${course.name}">Course Name</h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3 th:text="'₹ ' + ${course.price}">₹ Price</h3>
+                </div>
+            </div>
+            <p th:text="${course.description}">Description</p>
+        </div>
+    </a>
+</div>
+
+  </div>
+
   </div>
   <div class="more-courses"><button type="button" class="btn btn-lg more-courses-btn"><a href="/courses"><span></span>View More Courses</a></button></div>
 </div>
